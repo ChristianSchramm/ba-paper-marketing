@@ -103,7 +103,7 @@
 			"file": "Inhalt/Abkürzungsverzeichnis.tex",
 			"settings":
 			{
-				"buffer_size": 223,
+				"buffer_size": 231,
 				"line_ending": "Unix"
 			}
 		},
@@ -111,7 +111,7 @@
 			"file": "beleg.tex",
 			"settings":
 			{
-				"buffer_size": 8190,
+				"buffer_size": 8192,
 				"line_ending": "Unix"
 			}
 		}
@@ -119,9 +119,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 357.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"c",
+				"Git: Commit"
+			],
+			[
+				"ad",
+				"Git: Add..."
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -133,14 +141,6 @@
 			[
 				"pa",
 				"Package Control: Install Package"
-			],
-			[
-				"c",
-				"Git: Commit"
-			],
-			[
-				"ad",
-				"Git: Add..."
 			],
 			[
 				"a",
@@ -230,7 +230,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"",
@@ -855,15 +855,15 @@
 					"file": "Inhalt/Abkürzungsverzeichnis.tex",
 					"settings":
 					{
-						"buffer_size": 223,
+						"buffer_size": 231,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								223,
-								223
+								230,
+								230
 							]
 						],
 						"settings":
@@ -977,15 +977,15 @@
 					"file": "beleg.tex",
 					"settings":
 					{
-						"buffer_size": 8190,
+						"buffer_size": 8192,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5121,
-								5121
+								4800,
+								4800
 							]
 						],
 						"settings":
