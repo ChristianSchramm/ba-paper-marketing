@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"path": "/E/Latex/Beleg"
+		}
+	],
+	
+	"settings":
+	{
+		"filename_filter": "Beleg.tex",
+		 "build_on_save": true
+	}
+}
+

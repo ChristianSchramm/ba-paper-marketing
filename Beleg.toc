@@ -1,0 +1,14 @@
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.2}
+\contentsline {chapter}{\numberline {2}Ziel und Anforderungen}{2}{chapter.3}
+\contentsline {section}{\numberline {2.1}Ziel des Projektes}{2}{section.4}
+\contentsline {chapter}{\numberline {3}Was ist Adware}{3}{chapter.5}
+\contentsline {section}{\numberline {3.1}Section1}{3}{section.6}
+\contentsline {chapter}{\numberline {4}Adsense}{4}{chapter.7}
+\contentsline {chapter}{\numberline {5}Umsetzung}{5}{chapter.8}
+\contentsline {chapter}{\numberline {6}Zusammenfassung}{6}{chapter.9}
+\contentsline {chapter}{\nonumberline Abk\"urzungsverzeichnis}{I}{chapter*.10}
+\contentsline {chapter}{\nonumberline Quellen}{II}{chapter*.11}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{III}{chapter*.12}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{IV}{chapter*.13}
+\contentsline {chapter}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{V}{chapter*.14}
