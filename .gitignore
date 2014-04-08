@@ -24,7 +24,6 @@ Thumbs.db
 .tmproj
 *.esproj
 nbproject
-*.sublime-workspace
 
 # Dreamweaver added files
 _notes
