@@ -1,151 +1,223 @@
-% ------------------------------------------------------------------------------
-% Christian Schramm
-% ------------------------------------------------------------------------------
+% **************************************************
+% Clean Thesis
+% -- A LaTeX Style for Thesis Documents --
+%
+% Copyright (C) 2011-2013 Ricardo Langner
+% **************************************************
+%
+% Readme:
+% ----------------------------------------
+% *** Clean, Simple, Elegant ***
+% "Clean Thesis" is a LaTeX style for thesis documents, developed
+% for my diplom thesis (Diplomarbeit). The style can be understood
+% as my personal compromise - a typical clean looking scientific
+% document combined and polished with minor beautifications.
+%
+% The design of this "Clean Thesis" style is inspired
+% by user guide documents from Apple Inc.
+%
+% Note: If you are looking for an exact and correct style regarding
+% typographic rules, please have a look at the "Classic Thesis Style"
+% (see http://www.miede.de/index.php?page=classicthesis).
+%
+% *** Donation = Postcard ***
+% Based on the idea of Andr\'e Miede: If you like the "Clean Thesis"
+% style I would be very pleased about a donation in the form of a
+% POSTCARD. You can find my address in the file Clean-Thesis.pdf.
+% I am going to collect all postcards and exhibit them at the website
+% I mentioned.
+%
+% *** Idea and Inspiration ***
+% The idea of providing my customized style for thesis documents
+% passed through my mind while writing my own thesis. Motivated and
+% inspired by the superb "Classic Thesis Style"
+% (see http://www.miede.de/index.php?page=classicthesis) by Andr\'e Miede
+% (thanks to Andr\'e for doing a great job) I decided to collect all
+% design and style related functionality in a separate LaTeX style and
+% provide this style to other thesis writers.
 %
 %
-% Dokumentenkopf
-% ------------------------------------------------------------------------------
-\documentclass[
-  11pt, % Schriftgröße
-  DIV10,
-  ngerman, % für Umlaute, Silbentrennung etc.
-  a4paper, % Papierformat
-  oneside, % einseitiges Dokument
-  titlepage, % es wird eine Titelseite verwendet
-  parskip=half, % Abstand zwischen Absätzen (halbe Zeile)
-  headings=normal, % Größe der Überschriften verkleinern
-  listof=totoc, % Verzeichnisse im Inhaltsverzeichnis aufführen
-  bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis aufführen
-  index=totoc, % Index im Inhaltsverzeichnis aufführen
-  captions=tableheading, % Beschriftung von Tabellen unterhalb ausgeben
-  final, % Status des Dokuments (final/draft)
-  numbers=noenddot
-]{scrreprt}
-
-\renewcommand*{\chapterheadstartvskip}{\vspace{-1\baselineskip}} %Abstand vor Section
-\setlength{\headsep}{30pt} %Abstand Kopfzeile Textkšrper
+% License Information:
+% ----------------------------------------
+% "Clean Thesis" is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% "Clean Thesis" is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+% **************************************************
 
 
-%Abstand vor und nach †berschrift einstellbar
-%\makeatletter
-%\def\@makeschapterhead#1{%
-% \vspace*{5\p@}%       % 5 = Abstand vor chapter
-%  {\parindent \z@ \raggedright
-%    \normalfont
-%    \interlinepenalty\@M
-%    \huge \bfseries  #1\par\nobreak
-%    \vskip 30\p@   % 30 = Abstand nach chapter
-%  }}
-%\makeatother
+% **************************************************
+% Document Class Definition
+% **************************************************
+\documentclass[%
+	paper=A4,					% paper size --> A4 is default in Germany
+	twoside=false,				% onesite or twoside printing
+	openright,					% doublepage cleaning ends up right side
+	parskip=full,				% spacing value / method for paragraphs
+	chapterprefix=true,			% prefix for chapter marks
+	11pt,						% font size
+	headings=normal,			% size of headings
+	bibliography=totoc,			% include bib in toc
+	listof=totoc,				% include listof entries in toc
+	titlepage=on,				% own page for each title page
+	captions=tableabove,		% display table captions above the float env
+	draft=false,				% value for draft version
+]{scrreprt}%
 
+% **************************************************
+% Debug LaTeX Information
+% **************************************************
+%\listfiles
 
-% Meta-Informationen -----------------------------------------------------------
-%   Informationen über das Dokument, wie z.B. Titel, Autor, Matrikelnr. etc
-%   werden in der Datei Meta.tex definiert und k\"onnen danach global
-%   verwendet werden.
-% ------------------------------------------------------------------------------
-\input{Meta}
+% **************************************************
+% Information and Commands for Reuse
+% **************************************************
+\newcommand{\thesisTitle}{Suchmaschinenmarketing}
+\newcommand{\thesisSubtitle}{Suchmaschinenmarketing Untertitel}
+\newcommand{\thesisName}{Christian Schramm}
+\newcommand{\thesisMatrikel}{s3001102}
+\newcommand{\thesisSubject}{Belegarbeit Marketing}
+\newcommand{\thesisDate}{April 8, 2014}
+\newcommand{\thesisVersion}{0.0.1}
 
-% ben\"otigte Packages -----------------------------------------------------------
-%   LaTeX-Packages, die benötigt werden, sind in die Datei Packages.tex
-%   "ausgelagert", um diese Vorlage möglichst übersichtlich zu halten.
-% ------------------------------------------------------------------------------
-\input{Packages}
+\newcommand{\thesisFirstReviewer}{Stefan Pabst}
+% \newcommand{\thesisFirstReviewerUniversity}{\protect{webit! Gesellschaft für neue Medien mbH}}
+\newcommand{\thesisFirstReviewerDepartment}{webit! Gesellschaft für neue Medien mbH}
 
-% Erstellung eines Index und Abkürzungsverzeichnisses aktivieren ---------------
+\newcommand{\thesisSecondReviewer}{Prof. Eberhardt Engelhardt}
+\newcommand{\thesisSecondReviewerUniversity}{\protect{BERUFSAKADEMIE SACHSEN
+Staatliche Studienakademie Dresden}}
+% \newcommand{\thesisSecondReviewerDepartment}{Department of Clean Thesis Style}
 
-\makeindex
-%\makenomenclature
+% \newcommand{\thesisFirstSupervisor}{Jane Doe}
+% \newcommand{\thesisSecondSupervisor}{John Smith}
 
-% Kopf- und Fußzeilen, Seitenränder etc. ---------------------------------------
-\input{Seitenstil}
+\newcommand{\thesisUniversity}{\protect{BERUFSAKADEMIE SACHSEN Staatliche Studienakademie Dresden}}
+% \newcommand{\thesisUniversityDepartment}{}
+% \newcommand{\thesisUniversityInstitute}{Institut for Clean Thesis Dev}
+% \newcommand{\thesisUniversityGroup}{Clean Thesis Group (CTG)}
+\newcommand{\thesisUniversityCity}{Dresden}
+\newcommand{\thesisUniversityStreetAddress}{Hans-Grundig-Straße 25}
+\newcommand{\thesisUniversityPostalCode}{01307}
 
-% eigene Definitionen für Silbentrennung
-\include{Silbentrennung}
+% **************************************************
+% Load and Configure Packages
+% **************************************************
+\usepackage[utf8]{inputenc}		% defines file's character encoding
+\usepackage[ngerman]{babel} % babel system, adjust the language of the content
+\usepackage[printonlyused,footnote,nohyperlinks]{acronym}
 
-% eigene LaTeX-Befehle
-\include{Befehle}
+\usepackage{scrhack}
 
-% Das eigentliche Dokument -----------------------------------------------------
-%   Der eigentliche Inhalt des Dokuments beginnt hier. Die einzelnen Seiten
-%   und Kapitel werden in eigene Dateien ausgelagert und hier nur inkludiert.
-% ------------------------------------------------------------------------------
+\usepackage[					% clean thesis style
+	figuresep=colon,%
+	sansserif=false,%
+	hangfigurecaption=false,%
+	hangsection=true,%
+	hangsubsection=true,%
+	colorize=full,%
+	colortheme=bluemagenta,%
+]{cleanthesis}
+
+\hypersetup{					% setup the hyperref-package options
+	pdftitle={\thesisTitle},	% 	- title (PDF meta)
+	pdfsubject={\thesisSubject},% 	- subject (PDF meta)
+	pdfauthor={\thesisName},	% 	- author (PDF meta)
+	plainpages=false,			% 	-
+	colorlinks=false,			% 	- colorize links?
+	pdfborder={0 0 0},			% 	-
+	breaklinks=true,			% 	- allow line break inside links
+	bookmarksnumbered=true,		%
+	bookmarksopen=true			%
+}
+
+% **************************************************
+% Document CONTENT
+% **************************************************
 \begin{document}
 
-% auch subsubsection nummerieren
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
+% --------------------------
+% rename document parts
+% --------------------------
+\renewcaptionname{ngerman}{\figurename}{Abb.}
+\renewcaptionname{ngerman}{\tablename}{Tab.}
+% \renewcaptionname{english}{\figurename}{Fig.}
+% \renewcaptionname{english}{\tablename}{Tab.}
 
-% Deckblatt und Abstract ohne Seitenzahl
-\ofoot{}
-\include{Deckblatt}
+% --------------------------
+% Front matter
+% --------------------------
+\pagenumbering{roman}			% roman page numbing (invisible for empty page style)
+\pagestyle{empty}				% no header or footers
+\input{Inhalt/Titelseite}		% INCLUDE: all titlepages
+\cleardoublepage
 
+\pagestyle{plain}				% display just page numbers
+\input{Inhalt/abstract}		% INCLUDE: the abstracts (english and german)
+\cleardoublepage
+%
+% \input{Inhalt/acknowledgement} % INCLUDE: acknowledgement
+% \cleardoublepage
+%
+\setcounter{tocdepth}{2}		% define depth of toc
+\tableofcontents				% display table of contents
+\cleardoublepage
 
+% --------------------------
+% Body matter
+% --------------------------
+\pagenumbering{arabic}			% arabic page numbering
+\setcounter{page}{1}			% set page counter
+\pagestyle{maincontentstyle} 	% fancy header and footer
 
-\include{Inhalt/Abstract}
+\input{Inhalt/Einleitung} % INCLUDE: introduction
+\input{Inhalt/Grundlagen} % INCLUDE: Grundlagen
+\input{Inhalt/Betrachtungsbeispiel} % INCLUDE: Betrachtungsbeispiel
 
+% \input{Inhalt/chapter-related-work} % INCLUDE: related work
+% \input{Inhalt/chapter-system}	% INCLUDE: system
+% \input{Inhalt/chapter-concepts} % INCLUDE: concepts
+\input{Inhalt/Fazit} % INCLUDE: conclusion
+\cleardoublepage
 
-\ofoot{\pagemark}
+% --------------------------
+% Back matter
+% --------------------------
+{%
+\setstretch{1.1}
+\renewcommand{\bibfont}{\normalfont\small}
+\setlength{\biblabelsep}{0pt}
+\setlength{\bibitemsep}{0.5\baselineskip plus 0.5\baselineskip}
+\nocite{*}
+\printbibliography[nottype=online]
+\printbibliography[heading=subbibliography,title={Webseiten},type=online,prefixnumbers={@}]
+}
+\cleardoublepage
 
-% Seitennummerierung -----------------------------------------------------------
-%   Vor dem Hauptteil werden die Seiten in großen römischen Ziffern
-%   nummeriert.
-% ------------------------------------------------------------------------------
-\pagenumbering{gobble}
-\tableofcontents % Inhaltsverzeichnis
+\listoffigures
+\cleardoublepage
 
+\listoftables
+\cleardoublepage
+
+\input{Inhalt/Abkürzungsverzeichnis} % INCLUDE: Abkürzungsverzeichnis
+\cleardoublepage
+% \input{Inhalt/colophon}
+
+\input{Inhalt/Selbstständigkeitserklärung}
 \clearpage
-\pagenumbering{arabic}
-% die Inhaltskapitel werden in "Inhalt.tex" inkludiert -------------------------
-\input{Inhalt}
+\newpage
+\mbox{}
 
-
-\pagenumbering{Roman}
-
-% Abkürzungsverzeichnis --------------------------------------------------------
-
-\include{Inhalt/Akronyme}
-\include{Inhalt/Quellen}
-\listoffigures % Abbildungsverzeichnis
-\listoftables % Tabellenverzeichnis
-%\renewcommand{\lstlistlistingname}{Verzeichnis der Listings}
-%\lstlistoflistings % Listings-Verzeichnis
-
-% arabische Seitenzahlen im Hauptteil ------------------------------------------
-
-
-
-
-
-% Literaturverzeichnis ---------------------------------------------------------
-%   Das Literaturverzeichnis wird aus der BibTeX-Datenbank "Bibliographie.bib"
-%   erstellt.
-% ------------------------------------------------------------------------------
-%\bibliography{Bibliographie} % Aufruf: bibtex Diplomarbeit
-% \bibliographystyle{natdin} % DIN-Stil des Literaturverzeichnisses
-
-% Index ------------------------------------------------------------------------
-%   Zum Erstellen eines Index, die folgende Zeile auskommentieren.
-% ------------------------------------------------------------------------------
-%\printindex
-
-
-
-\include{Erklaerung} % Selbständigkeitserklärung
-
-% Anhang -----------------------------------------------------------------------
-%   Die Inhalte des Anhangs werden analog zu den Kapiteln inkludiert.
-%   Dies geschieht in der Datei "Anhang.tex".
-% ------------------------------------------------------------------------------
-%\begin{appendix}
-%    \clearpage
-%    \pagenumbering{roman}
-%    \chapter{Anhang}
-%    \label{sec:Anhang}
-%    % Rand der Aufzählungen in Tabellen anpassen
-%    \setdefaultleftmargin{1em}{}{}{}{}{}
-%    \input{Anhang}
-%\end{appendix}
-
-
+% **************************************************
+% End of Document CONTENT
+% **************************************************
 \end{document}

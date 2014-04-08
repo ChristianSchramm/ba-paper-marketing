@@ -2,14 +2,7 @@
 	"folders":
 	[
 		{
-			"path": "/E/Latex/Beleg"
+			"path": "/C/Users/Christian/Projekte/ba-paper-marketing"
 		}
-	],
-	
-	"settings":
-	{
-		"filename_filter": "Beleg.tex",
-		 "build_on_save": true
-	}
+	]
 }
-
